@@ -134,8 +134,7 @@ top_10_clients AS(
         GROUP BY client_id, name, surname
         ORDER BY cnt DESC
         LIMIT 10
-    ) sub1
-	),
+    )),
 clients_with_A AS(
 	 SELECT STRING_AGG(name || ' ' || surname || ': ' || cnt, ';') AS result
     	FROM (
@@ -148,8 +147,7 @@ clients_with_A AS(
         	WHERE name LIKE 'A%'
         	GROUP BY client_id, name, surname
         	HAVING COUNT(order_id) > 1
-    ) sub2
-),
+    )),
 active_category2_orders AS(
  SELECT STRING_AGG('Order: ' || order_id ||', Client: ' || name || ' ' || surname || ', Category: ' || product_category,';') AS result
     from filtered_orders
