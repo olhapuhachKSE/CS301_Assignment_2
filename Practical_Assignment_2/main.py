@@ -10,8 +10,8 @@ from faker import Faker
 # Connection settings
 HOST = 'localhost' # put your credentials here
 USER = 'postgres' # put your credentials here
-PASSWORD = '1' # put your credentials here
-DATABASE = 'banks' # put your credentials here
+PASSWORD = '****' # put your credentials here
+DATABASE = 'as2' # put your credentials here
 PORT = '5432' # put your credentials here
 
 # Data volume settings
